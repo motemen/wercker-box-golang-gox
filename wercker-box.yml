@@ -9,5 +9,6 @@ keywords:
   - golang
   - cross-compile
 script: |
-  sudo /usr/local/go/bin/go get github.com/mitchellh/gox
+  source /etc/profile
+  go get github.com/mitchellh/gox
   sudo gox -build-toolchain
