@@ -9,6 +9,8 @@ keywords:
   - golang
   - cross-compile
 script: |
-  source /etc/profile
+  cat /etc/profile
+  export GOPATH="$HOME/go"
+  export PATH="$PATH:$GOPATH/bin"
   go get github.com/mitchellh/gox
   sudo gox -build-toolchain
