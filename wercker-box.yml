@@ -1,0 +1,13 @@
+name: golang-gox
+version: 0.0.1
+inherits: wercker/golang@1.1.2
+type: main
+platform: ubuntu@12.04
+description: Wercker box for cross-compiling Go using gox
+keywords:
+  - go
+  - golang
+  - cross-compile
+script: |
+  sudo go get github.com/mitchellh/gox
+  sudo gox -build-toolchain
