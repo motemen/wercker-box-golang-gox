@@ -10,6 +10,6 @@ keywords:
   - cross-compile
 script: |
   go get -u -v github.com/mitchellh/gox
-  env
-  sudo env
+  go env || true
+  sudo env || true
   env USER_GOPATH=$GOPATH sudo $USER_GOPATH/bin/gox -build-toolchain
