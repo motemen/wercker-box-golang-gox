@@ -12,4 +12,4 @@ script: |
   export GOPATH="$HOME/go"
   export PATH="$PATH:$GOPATH/bin"
   go get github.com/mitchellh/gox
-  sudo -E gox -build-toolchain
+  sudo -E $GOPATH/bin/gox -build-toolchain
