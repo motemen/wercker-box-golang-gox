@@ -1,5 +1,5 @@
 name: golang-gox
-version: 0.0.1-dev
+version: 0.0.2
 inherits: wercker/golang@1.1.2
 type: main
 platform: ubuntu@12.04
@@ -10,6 +10,4 @@ keywords:
   - cross-compile
 script: |
   go get -u -v github.com/mitchellh/gox
-  go env || true
-  sudo -E go env || true
   sudo -E env PATH=$GOPATH/bin:$PATH gox -build-toolchain
