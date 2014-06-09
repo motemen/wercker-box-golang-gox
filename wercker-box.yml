@@ -11,5 +11,5 @@ keywords:
 script: |
   go get -u -v github.com/mitchellh/gox
   go env || true
-  sudo go env || true
-  env USER_GOPATH=$GOPATH sudo env PATH=$USER_GOPATH/bin:$PATH $USER_GOPATH/bin/gox -build-toolchain
+  sudo -E go env || true
+  sudo -E env PATH=$GOPATH/bin:$PATH gox -build-toolchain
